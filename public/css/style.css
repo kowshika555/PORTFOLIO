@@ -1,0 +1,174 @@
+/* General Reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+  @keyframes gradientShift {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  body {
+    margin: 0;
+    background: linear-gradient(90deg, #1c92d2, #f2fcfe, #0052d4, #4364f7);
+    background-size: 300% 300%;
+    animation: gradientShift 10s ease infinite;
+    color: rgb(0, 0, 0);
+    text-align: center;
+  }
+
+  /* body {
+    /* background: radial-gradient(circle, #fa0aaa, #57043b); 
+    color: white;
+    text-align: center; } */
+  
+  header {
+    padding: 60px 0;
+    animation: fadeInDown 1.5s ease;
+  }
+  
+  .title {
+    font-size: 3rem;
+  }
+  
+  .subtitle {
+    font-size: 1.5rem;
+    color: #b9f2ff; /* Soft aqua for the main text */
+    text-shadow: 
+      0 0 5px #b9f2ff,  /* Close aqua glow */
+      0 0 15px #89cff0, /* Light blue for the medium glow */
+      0 0 25px #ff80ed, /* Bright pink for contrast */
+      0 0 35px #ffffff; /* Subtle white outer glow */
+  }
+  /* .subtitle {
+    font-size: 1.5rem;
+    color: #383737;
+    text-shadow: 0 0 10px #fff, 0 0 20px #302f30, 0 0 30px #050505, 0 0 40px #353435, 0 0 50px #3a383a;
+  }
+   */
+
+  .about, .projects, .contact {
+    padding: 30px;
+    animation: fadeIn 1.5s ease;
+    font-style: italic;
+  }
+  
+  .project-card {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 15px;
+    margin: 10px;
+    display: inline-block;
+    width: 200px;
+  }
+  
+  footer {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Navigation Bar Styles */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.3);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+  }
+  
+  .navbar .logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    transition: color 0.3s;
+    font-family: Arial Narrow Bold;
+    font-size: 40px;
+  }
+  
+  .nav-links {
+    margin-right: 100px;
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    justify-content: flex-end;
+    font-family: Arial Narrow Bold;
+  }
+  
+  .nav-links li {
+    display: inline-block;
+  }
+  
+  .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+  }
+  
+  .nav-links a:hover {
+    color: #ffeb3b; /* Highlight color */
+  }
+  
+  /* Hamburger Menu for Mobile */
+  .hamburger {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 4px;
+  }
+  
+  .hamburger .bar {
+    width: 30px;
+    height: 3px;
+    background-color: white;
+  }
+  
+  @media (max-width: 768px) {
+    .nav-links {
+      display: none;
+      width: 100%;
+      text-align: center;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .nav-links.active {
+      display: flex;
+    }
+    .hamburger {
+      display: flex;
+    }
+  }
+  
+  /* Animations */
+  @keyframes fadeInDown {
+    from {
+      opacity: 0;
+      transform: translateY(-50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
